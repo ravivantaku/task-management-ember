@@ -1,0 +1,1 @@
+Taskmanagement.ApplicationAdapter = DS.FixtureAdapter;
