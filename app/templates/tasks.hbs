@@ -1,4 +1,8 @@
-<div class="well">
-	List of Tasks.
+<div>
+	{{#link-to 'new' }}Create{{/link-to}}
+	<ul>
+	{{#each}}
+		<li>{{#link-to 'show' this class='list-group-item'}}{{summary}}{{/link-to}}</li>
+	{{/each}}
+	</ul>
 </div>
-
