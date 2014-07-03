@@ -1,8 +1,13 @@
-<div>
-	{{#link-to 'new' }}Create{{/link-to}}
-	<ul>
-	{{#each}}
-		<li>{{#link-to 'show' this class='list-group-item'}}{{summary}}{{/link-to}}</li>
-	{{/each}}
-	</ul>
+<div class="pull-right">
+    {{#link-to 'new'}}Create New Task{{/link-to}}
+</div>
+<div class="panel panel-primary" id="taskList">
+    <div class="panel-heading">List of Tasks</div>
+    <div>
+    <ul class="list-group">
+        {{#each}}
+            {{#link-to 'show' this class='list-group-item'}}{{summary}}{{/link-to}}
+        {{/each}}
+    </ul>
+    </div>
 </div>

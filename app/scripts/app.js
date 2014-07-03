@@ -1,5 +1,5 @@
 var Taskmanagement = window.Taskmanagement = Ember.Application.create({
-    LOG_TRANSITION: true
+    LOG_TRANSITIONS: true
 });
 
 /* Order and include as you please. */

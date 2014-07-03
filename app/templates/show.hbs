@@ -1,38 +1,34 @@
-<div>
-	This page display task details.
-	{{summary}}
-	{{#link-to 'edit' this}}GoTo Edit{{/link-to}}
-</div>
-
-<div class="panel panel-primary">
+<div class="panel panel-primary" id="taskDetails">
 	<div class="panel-heading">Task Details</div>
-	<div class="panel-body" id="taskDetails">
-		<h2 class="txt-info">{{ summary }}</h2>
-		<div class="btn-group">
-			<button type="button" id="editbtn" class="btn btn-default" ><span class="glyphicon glyphicon-pencil">Edit</span></button>
-			<button type="button" id="resolvebtn" class="btn btn-default">Resolve Task</button>
-			<button type="button" id="closebtn" class="btn btn-default">Close Task</button>
+	<div class="panel-body">
+		<h2 class="txt-info">{{summary}}</h2>
+        <div class="btn-group">
+			<!--<button {{action 'edit' this}} class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span>Edit</button>
+			<button type="button" id="resolveBtn" class="btn btn-default">Resolve Task</button>
+			<button type="button" id="closeBtn" class="btn btn-default">Close Task</button>-->
+            {{#link-to 'edit' this}}Edit{{/link-to}}
 		</div>
+        <br />
 		<div class="well">
-			<div >
-				<label>Priority :</label>
-				<span> {{ priority }}</span>
+			<div>
+				<label>Priority : </label>
+				<span>{{priority}}</span>
 			</div>
-			<div >
-				<label  >Due Date :</label>
-				<span> {{ dueDate }}</span>
+			<div>
+				<label>Due Date :</label>
+				<span>{{dueDate}}</span>
 			</div>
-			<div >
-				<label  >Status :</label>
-				<span> {{ status }}</span>
+			<div>
+				<label>Status :</label>
+				<span>{{status}}</span>
 			</div>
 			<div>
 				<label>Description :</label>
-				<span> {{ description }}</span>
+				<span>{{description}}</span>
 			</div>
-			<div >
+			<div>
 				<label>Estimate Time :</label>
-				<span> {{estimateTime }}</span>
+				<span>{{estimateTime}}</span>
 			</div>
 		</div>
 	</div>

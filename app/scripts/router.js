@@ -8,5 +8,5 @@ Taskmanagement.Router.map(function () {
     });
     this.route('new', {path:'/tasks/new'});
     this.resource('show', {path: '/tasks/:id'});
-    this.route('edit', {path:'/tasks/:id/edit'});
+    this.resource('edit', {path:'/tasks/:id/edit'});
 });

@@ -1,6 +1,39 @@
-<div class="well">
-	Edit the task here..
-	summary : {{this.summary}}
-	{{input value=this.summary}}
-	<button {{action 'update'}} class="btn btn-primary">Update</button>
+<div class="panel panel-primary" id="updateTaskForm">
+    <div class="panel-heading">
+        <h3 class="panel-title">UpdateTask form</h3>
+    </div>
+    <div class="panel-body">
+        <form>
+            <div class="form-group">
+                <label for="summary" class="form-label">Summary</label>
+                {{input name="summary" id="summary" class="form-control" value=this.summary}}
+            </div>
+            <div class="form-group">
+                <label for="priority" class="form-label">Priority</label>
+                <select name="priority" id="priority" class="form-control">
+                    <option value="Blocker"> Blocker </option>
+                    <option value="Critical"> Critical </option>
+                    <option value="Major"> Major </option>
+                    <option value="Minor"> Minor </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dueDate" class="form-label">Due Date</label>
+                {{input class="form-control" name="dueDate" id="dueDate" value=this.dueDate }}
+            </div>
+            <div class="form-group">
+                <label for="description" class="form-label">Description</label>
+                {{textarea class="form-control" value=this.description name="description" id="description"}}
+            </div>
+            <div class="form-group">
+                <label for="estimateTime" class="form-label">Original Estimate</label>
+                {{input type="text" class="form-control" value=this.estimateTime name="estimateTime" id="estimateTime" }}
+            </div>
+            <div class="pull-right">
+                <button {{action 'update'}} class="btn btn-primary">Update</button>
+                <button type="reset" class="btn btn-primary">Cancel</button>
+            </div>
+        </form>
+    </div>
 </div>
+
